@@ -17,6 +17,9 @@ jobs:
       - name: Compile Windows Executable
         run: dart compile exe bin/xvo_validator.dart -o xvo_validator.exe
 
+      - name: Test Executable
+        run: .\xvo_validator.exe flight.IGC
+
       - name: Upload Executable Artifact
         uses: actions/upload-artifact@v4
         with:
